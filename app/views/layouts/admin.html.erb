@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SimpleCms | <%= @page_title ||"Admin" %>|</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+  </head>
+<h1>Admin</h1>
+  <body>
+    <%= yield %>
+  </body>
+  <p>copyrights neotaric.inc <%= Time.now.strftime("%Y") %></p>
+</html>

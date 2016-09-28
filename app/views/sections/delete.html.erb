@@ -1,0 +1,16 @@
+<div class ="delete_page">
+<h>DELETE FILE</h>
+
+<%= form_for(:section, :url=>{:action=> 'destroy', :id => @section.id}) do |f|%>
+<table>
+<tr>
+	<td>ARE YOU SURE YOU WANT TO DELETE? :
+	</td>
+	<td><%=@section.name%>
+	</td>
+</tr>
+</table>
+<%= submit_tag("DELETE SECTION")%>
+<%end%>
+
+</div>

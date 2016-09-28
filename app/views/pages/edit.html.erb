@@ -1,0 +1,28 @@
+<h1>Edit Item Here</h1>
+<%= link_to("Back to Home", :action => 'index')%>
+<div class ="Edit Item">
+	<%= form_for(:page, :url=>{:action => 'update', :id => @page.id }) do |f| %>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td> <%=f.text_field(:name) %></td>
+		</tr>
+		<tr>
+			<td>permalink</td>
+			<td> <%=f.text_field(:permalink) %></td>
+		</tr>
+		<tr>
+			<td>position</td>
+			<td> <%=f.text_field(:position) %></td>
+		</tr>
+		<tr>
+			<td>visible</td>
+			<td> <%=f.text_field(:visible) %></td>
+		</tr>
+	</table>
+	<div class="form-buttons">
+	<%= submit_tag("Update Page")%>
+   </div>
+	
+	<%end%>
+</div>

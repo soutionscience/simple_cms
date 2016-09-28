@@ -1,0 +1,12 @@
+<h1>Delete page</h1>
+<div class= "Delete Page">
+	
+	<%= form_for(:page, :url =>{:action => 'destroy', :id=> @page.id}) do |f| %>
+
+	<p>Are you sure you want to delete this page ? </p>
+	<h2><%=f.name %></h2>
+	<%= submit_tag(Delete)%>
+
+	<%end%>
+</div>
+

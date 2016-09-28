@@ -1,0 +1,25 @@
+<h1>Edit Sections</h1>
+
+<%= form_for(:section, :url=>{:action=> 'update', :id=> @section.id}) do |f|%>
+<table>
+<tr>
+	<td>Name
+	</td>
+	<td><%=f.text_field(:name)%>
+	</td>
+</tr>
+<tr>
+	<td>Position
+	</td>
+	<td><%=f.text_field(:position)%>
+	</td>
+</tr>
+<tr>
+	<td>Visible
+	</td>
+	<td><%=f.text_field(:visible)%>
+	</td>
+</tr>
+</table>
+<%= submit_tag("Update Section") %>
+<%end%>

@@ -1,0 +1,34 @@
+<h1>Show all Section Here</h1>
+ <%= link_to("Add new Section", :action =>'new')%>
+ <div class ="SectionsPage">
+ 	<table>
+ 		<tr class = "headers">
+ 			<th>&nbsp;</th>
+ 			<th>NAME</th>
+ 			<th>POSITION</th>
+ 			<th>VISIBLE</th>
+ 			<th>CONTENT-TYPE</th>
+ 		</tr>
+
+ 		<% @sections.each do |f|%>
+ 		<tr>
+ 			<td>&nbsp;</td>
+ 			<td><%=f.name%></td>
+ 			<td><%=f.position%></td>
+ 			<td class "center"><%=f.visible ? 'Yes' : 'No' %></td>
+ 			<td class "center"><%=f.content_type ? 'Yes' : 'No' %></td>
+ 			<td class "center"><%=f.content ? 'Yes' : 'No' %></td>
+ 			<td class "actions"> 
+ 			    <%= link_to("Show", {:action => 'show', :id =>f.id }) %>
+ 				<%=link_to("edit", {:action => 'edit', :id=> f.id})%>
+ 			    <%=link_to("Delete", {:action => 'delete', :id=> f.id})%></td>
+ 		</tr>
+ 		
+ 		
+
+ 		<%end%>
+
+ 		
+ 	</table>
+ </div>
+
